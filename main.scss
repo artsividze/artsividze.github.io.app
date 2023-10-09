@@ -1,0 +1,513 @@
+$color--main--white:#f1f2f3;
+$color--white:#fff;
+$color--green:#198754;
+$color--red:red;
+$color--black:black;
+$color--gray:#71716F;
+$margin-left:13.7vw;
+$margin-right:13.7vw;
+
+@keyframes slideIn{
+  from{
+   transform: translateY(10px);
+   display:none;
+  }
+  to{
+   transform: translateX(0)
+  }
+}
+@keyframes slideInRight{
+  from{
+   transform: translatex(200px)
+  }
+  to{
+   transform: translateX(0)
+  }
+}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:$color--black;
+  & a{
+    text-decoration: none;
+  }
+.body{
+  width:100vw;
+  height:100vh;
+  background-color: $color--main--white;
+  overflow-x: hidden;
+}
+}
+.header__nav{
+ display:flex;
+ margin-left:$margin-left;
+ margin-right:$margin-right;
+ align-items: center;
+ justify-content: center;
+ padding-top:1vh;
+ padding-bottom: 1vh;
+ background-color:$color--main--white;
+ &--logo{
+  width:22vw;
+  height:8vh;
+  min-width:300px;
+  cursor: pointer;
+  z-index:1;
+ }
+ &--ul{
+  display:flex;
+  margin-left:6vw;
+  list-style: none;
+  margin-right:3vw;
+   li:not(:last-child){
+    margin-right:5vw;
+  }
+   li:first-child{
+    font-weight: 600;
+  }
+  li:hover{
+    color:$color--green;
+    cursor:pointer;
+    scale:1.1;
+  }
+ }
+  &--button{
+   padding:0.5rem;
+    border:1px solid $color--green;
+    border-radius:3px;
+    font-weight: 500 !important;
+    &:hover{
+      cursor: pointer;
+      background-color: $color--white;
+    }
+  }
+}
+.main{
+  display:flex;
+  overflow-x: hidden;
+  background-image: url('./tyler-franta-iusJ25iYu1c-unsplash\ \(2\).jpg');
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  overflow-x:hidden;
+  width:calc(100vw);
+  height:89vh; 
+    &__section{
+    margin-left:19.5vw;
+  &--text{
+    margin-top:14vh;
+    color:$color--red;
+    .h2{
+      font-size:1.3rem;
+      color:$color--red;
+    }
+    span{
+      font-size:3rem;
+      color:$color--red;
+    }
+    .h1{
+      font-size:4.2rem;
+      margin-top:1.6vh;
+      color:$color--red;
+    }
+    .lst{
+      font-size:1.2rem;
+      margin-top:-0.7vh;
+      line-height: 3.2vh;
+      color:$color--red;
+    }
+  }
+  &--button{
+    padding:11px 31px;
+    border:3px solid $color--white;
+    border-radius:120px;
+    letter-spacing: .03em;
+    font-weight: 500;
+    line-height: 22px;
+    background: none;
+    color:$color--red;
+    margin-top:1vh;
+    cursor:pointer;
+    animation-name: slideIn;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-in ;
+    animation-delay: 0.1s ;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-fill-mode: none;
+
+
+    &:hover{
+      background-color: white;
+      transform: translateY(5px);
+    }
+  }
+  &--numbers{
+    display:flex;
+    font-size:1rem;
+    color:$color--red;
+    align-items: center;
+    margin-top:15.8vh;
+  }
+  .number:not(:first-child){
+    margin-right:1.1vw;
+    color:$color--red;
+  }
+  .number{
+    color:$color--red;
+    font-size: 1.1rem;
+  }
+}
+}
+.hr-1{
+  display:inline;
+  height:0.1vh;
+  width:16.5vw;
+  margin-left:2.7vw;
+  margin-right:1vw;
+}
+
+
+.icon-2{
+  :hover{
+    cursor: pointer;
+      scale:1.1;
+      
+    }
+    .fa{
+      position:fixed;
+      background-color:$color--red;
+      top:calc(88vh);
+      margin-left:calc(93vw) !important;
+      width:60px;
+      height:60px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      font-size:2rem;
+      border-radius:100% 100%;
+      border:1px solid $color--white;
+      box-shadow: 0px 0px 10px 10px $color--white;
+      -webkit-tap-highlight-color: transparent;
+      animation-name: slideInRight;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in ;
+      animation-delay: 0.1s ;
+      animation-iteration-count: 1;
+      animation-direction:normal;
+      animation-fill-mode: none;
+      
+    }
+  }
+  .button-1{
+    display:none;
+    padding:0.5rem;
+    padding-bottom:0.6rem !important;
+    border:1px solid $color--green;
+    border-radius:3px;
+    font-weight: 500 !important;
+    &:hover{
+      cursor: pointer;
+      background-color: $color--white;
+    }
+
+  }
+  
+  @media screen and (max-width: 1480px) {
+    .footer__section--ul-1{
+      margin-left:5vw !important;
+    } 
+    .icon-2{
+      margin-left:-5vw !important;
+    }
+    .footer__section {
+      margin-left:10vw !important;
+    }
+    .hr-1{
+      width:30vw !important;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .footer__section--icons{
+      margin-left:75vw !important;
+    }
+    
+    
+  }
+  @media screen and (max-width: 1100px) {
+    .footer__section--icons{
+      display:none !important;
+    }
+    .main{
+      display:flex;
+      justify-content: center;
+      &__section{
+        margin-left:0 !important;
+      }
+    }
+  }
+  @media screen and (max-width: 917px) {
+    .header__nav--button{
+      display:none;
+    }
+    
+    .footer{
+      display:flex;
+      justify-content: center;
+      &__section{
+        margin-left:0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+  @media screen and (max-width: 804px) {
+   .header__nav{
+    flex-direction: column;
+    margin-left:0!important;
+    margin-right: 0 !important;
+    &--ul{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .additional-1{
+      display:flex;
+      align-items: center;
+      .header__nav--logo{
+        margin-left:3vw;
+      }
+      .button-1{
+        display:inline ;
+        height:30px;
+        margin-left:26vw;
+      }
+      
+    }
+  }
+        .header__nav--ul{
+        li{
+         margin-top:1vh !important;
+         margin-bottom:1vh !important;
+         
+        }
+      }
+        .h2{
+          font-size:1rem  !important;
+          color:$color--red;
+        }
+        span{
+          font-size:2rem !important;
+          color:$color--red;
+        }
+        .h1{
+          font-size:3rem !important;
+          margin-top:1.6vh;
+          color:$color--red;
+        }
+        .lst{
+          font-size:1rem !important;
+          margin-top:-0.7vh;
+          line-height: 3.2vh;
+          color:$color--red;
+        }
+        .icon-2{
+        
+          margin-left:-10vw !important;
+        }
+  }
+  @media screen and (max-width: 660px) {
+    .footer__section--ul-2{
+      margin-left:3vw !important;
+    }
+    .h1{
+      font-size:2.5rem !important;
+      margin-top:1.6vh;
+      color:$color--red;
+    }
+  }
+  @media screen and (max-width: 590px) {
+    .footer{
+      height:30vh;
+      &__logo{
+        display:flex;
+        width:80vw !important;
+        height:15vw !important;
+        align-items: center;
+      }
+      &__section{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &--ul-2{
+         margin-left:23vw !important; 
+         margin-top: 5vh !important;
+        }
+        
+      }
+    }}
+    @media screen and (max-width: 590px) {
+      .header__nav--logo{
+        margin-left:5vw !important;
+      }
+      .button-1{
+        margin-left:15vw !important;
+      }}
+    @media screen and (max-width: 530px) {
+      .header__nav--logo{
+        margin-left:3vw !important;
+      }
+      .button-1{
+        margin-left:8w !important;
+      }}
+    @media screen and (max-width: 500px) {
+      .header__nav--logo{
+        margin-left:5vw !important;
+      }
+      .button-1{
+        margin-left:8vw !important;
+      }
+      .h1{
+        font-size:2rem !important;
+      }
+      .hr-1{
+        width:25vw !important;
+      }
+    }
+    @media screen and (max-width: 460px) {
+      .additional-1{
+      .button-1{
+        display:none !important;
+      } }
+      .icon-2{
+        margin-left:-17vw !important; 
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .footer{
+        height:35vh;
+      &__section{
+        margin-top:5vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &--ul-2{
+          margin-left:0vw !important;
+        }
+        &--ul-1{
+          margin-top:3vh;
+        }
+      }
+      &__logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8vw !important;
+      }
+    }
+    }
+      
+  footer{
+    height:13vh;
+    background-color: $color--black;
+    overflow: hidden;
+  }
+  .footer__section{
+    margin-left:$margin-left;
+    margin-right: $margin-right;
+    height:100%;
+    display:inline-block;
+    margin-top:2vh;
+    img{
+      width:10vw;
+      height:7vh;
+      min-width:200px;
+      cursor: pointer;
+      margin-left:3vw;
+        }
+    &--ul-1{
+      color:$color--white;
+      font-size: 1.3rem;
+      margin-left:17vw;
+      display:inline-block;
+      &:hover{
+        cursor: pointer;
+        color:$color--red;
+      }
+      li{
+        color:$color--gray;
+        line-height: 1.5rem;
+        &:hover{
+          cursor: pointer;
+        color:$color--red;
+        }
+        pre{
+          color:$color--gray;
+          &:hover{
+            cursor: pointer;
+          color:$color--red;}
+        }
+        &:first-child{
+          margin-top: 1vh;
+        }
+        
+      }
+      
+    }
+    &--ul-2{
+      color:$color--white;
+      font-size: 1.3rem;
+      margin-left:15vw;
+      display:inline-block;
+      .fa-commenting-o{
+        color:$color--white;
+      }
+      .fa-phone{
+        color:$color--white;
+      }
+
+      &:hover{
+        cursor: pointer;
+        color:$color--red;
+      }
+      li{
+        color:$color--gray;
+        line-height: 1.5rem;
+        &:hover{
+          cursor: pointer;
+          color:$color--red;
+        }
+        &:first-child{
+          margin-top:1vh;
+      }
+    }}
+    &--icons{
+      display:flex;
+      margin-left:67vw;
+      margin-top:-5vh;
+      .fa-facebook{
+       color:$color--white;
+       &:hover{
+        cursor: pointer;
+        color:$color--red;
+       }
+      }
+      .fa-twitter{
+       color:$color--white;
+       margin-left:2vw;
+        &:hover{
+        cursor: pointer;
+        color:$color--red;
+       }
+      }
+    }}
+    .additional{
+      background-color:$color--black;
+      color:black;
+    }
