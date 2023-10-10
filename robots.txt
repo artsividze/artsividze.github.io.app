@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://freeinternetforallnow.netlify.app/sitemap.xml
