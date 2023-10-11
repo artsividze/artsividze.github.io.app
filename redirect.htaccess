@@ -1,3 +1,3 @@
 RewriteEngine on 
  RewriteCond %{HTTPS_HOST} ^www.internetforallnow.netlify.app [NC]  
- RewriteRule ^(.*)$ httpS://internetforallnow.netlify.app/$1 [L,R=301]
+ RewriteRule ^(.*)$ https://internetforallnow.netlify.app/$1 [L,R=301]
