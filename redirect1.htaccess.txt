@@ -1,0 +1,4 @@
+#Force non-www: 
+ RewriteEngine on 
+ RewriteCond %{HTTP_HOST} ^www.internetforallnow.netlify.app/ [NC]  
+RewriteRule ^(.*)$ https://internetforallnow.netlify.app/$1 [L,R=301]
