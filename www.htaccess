@@ -1,2 +1,3 @@
+
 RewriteCond %{HTTP_HOST} ^internetforallnow.netlify.app$ [NC]
 RewriteRule ^(.*)$ internetforallnow.netlify.app/$1 [R=301,L]
